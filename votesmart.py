@@ -298,8 +298,8 @@ class votesmart(object):
             return _result_to_obj(Candidate, result['candidateList']['candidate'])
 
         @staticmethod
-        def getByElection(electionId):
-            params = {'electionId': electionId}
+        def getByElection(electionId, stageId):
+            params = {'electionId': electionId, 'stageId': stageId}
             result = votesmart._apicall('Candidates.getByElection', params)
             return _result_to_obj(Candidate, result['candidateList']['candidate'])
 
